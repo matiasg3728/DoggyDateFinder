@@ -1,0 +1,26 @@
+{
+  "name": "ddf",
+  "version": "1.0.0",
+  "description": "Totally rad site",
+  "main": "./server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matiasg3728/DoggyDateFinder.git"
+  },
+  "author": "Ann'DEsposito Matias Garcia",
+  "license": "MIT",
+    "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "hbs": "^4.0.1",
+    "mongoose": "^4.8.6"
+  },
+  "bugs": {
+    "url": "https://github.com/matiasg3728/DoggyDateFinder/issues"
+  },
+  "homepage": "https://github.com/matiasg3728/DoggyDateFinder#readme"
+}
