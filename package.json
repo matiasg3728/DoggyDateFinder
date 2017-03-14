@@ -18,6 +18,9 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "express-session": "^1.15.1",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0",
+    "gulp-watch": "^4.3.11",
     "hbs": "^4.0.1",
     "mongoose": "^4.8.6"
   },
