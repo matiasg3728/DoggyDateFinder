@@ -53,7 +53,7 @@ router.post('/signup', function(request, response, next) {
               request.session.userId = user.id;
               request.session.isLoggedIn = true;
 
-              response.redirect('/user/login');
+              response.redirect('/dogs/adddog');
             }
             else {
               response.send('there was an error')
@@ -68,7 +68,9 @@ router.post('/signup', function(request, response, next) {
   })
 })
 
-router.get('/home')
+router.get('/home', function(request, response) {
+  response.render('userhome')
+})
 
 
 
