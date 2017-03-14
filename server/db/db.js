@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var connectionString = 'mongodb://localhost/dogdata';
 
+
 mongoose.connect(connectionString);
 
 mongoose.connection.on('connected', function(){

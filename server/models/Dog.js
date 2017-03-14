@@ -1,19 +1,19 @@
 var mongoose = require('mongoose');
 
 var DogSchema = new mongoose.Schema({
-  ownerId: Number,
+  //ownerId: Number,
   name: {type: String, required: true},
-  age: Number,
-  breed: String,
-  picture: String,
+  //age: Number,
+  //breed: String,
+ // picture: String,
   playfulnessLevel: {type: Number, required: true},
-  favoriteToys: String,
-  likes: String,
-  dislikes: String,
-  aboutMe: String,
+ // favoriteToys: String,
+  //likes: String,
+ // dislikes: String,
+  //aboutMe: String,
   zipcode: {type: Number, required: true},
-  playdateDogs: Array,
-  comments: Array,
+  //playdateDogs: Array,
+  //comments: Array,
 }, {strict: false});
 
 var dogModel = mongoose.model('Dog', DogSchema);
