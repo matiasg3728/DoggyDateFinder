@@ -15,7 +15,13 @@ router.post('/adddog', function(request, response){
 		playfulnessLevel: request.body.playfulnessLevel, 
 		zipcode: request.body.zipcode
 	})
-	dog.save();
+	dog.save(function (err) {
+		if (err) {
+			console.log(err);
+		} else {
+  			console.log('meow');
+		}
+	});
 
 	response.render('userhome');	
 
