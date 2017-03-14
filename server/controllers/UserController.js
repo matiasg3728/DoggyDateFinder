@@ -1,6 +1,83 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/User');
+var bcrypt = require('bcryptjs');
+
+
+router.get('/login', function(request, response, next) {
+  //console.log(request.session);
+  //console.log(User.find({"username": "admin"}))
+  response.render('login', {});
+});
+
+router.post('/login', function(request, response, next) {
+  console.log('in log in')
+  User.findOne({username: request.body.username}, function(err, user) {
+    if(user) {
+      bcrypt.compare(request.body.password, user.password, function(err, match) {
+        if(match === true) {
+          request.session.username = user.username;
+          request.session.userId = user.id;
+          request.session.isLoggedIn = true;
+          console.log('inside nested if')
+          response.redirect('/user/home');
+        }
+        else {
+          response.render('login', {message: 'username or password was incorrect'})
+        }
+      })
+    }
+    else {
+      response.render('login', {message: 'username or password was incorrect'});
+    }
+  })
+})
+
+router.get('/signup', function(request, response, next) {
+  response.render('signup', {})
+})
+
+router.post('/signup', function(request, response, next) {
+  User.findOne({username: request.body.username}, function(err, user) {
+    if(user === null) {
+      console.log("inside the first if statements")
+      bcrypt.genSalt(10, function(err, salt) {
+        bcrypt.hash(request.body.password, salt, function(err, hash) {
+          var userDbEntry = {};
+          userDbEntry.username = request.body.username;
+          userDbEntry.password = hash;
+
+          User.create(userDbEntry, function(err, user) {
+            if(user) {
+              request.session.username = user.username;
+              request.session.userId = user.id;
+              request.session.isLoggedIn = true;
+
+              response.redirect('/user/login');
+            }
+            else {
+              response.send('there was an error')
+            }
+          })
+        })
+      })
+    }
+    else {
+      response.render('signup', {message: 'username already taken'})
+    }
+  })
+})
+
+router.get('/home')
+
+
+
+router.get('/logout', function(request, response) {
+  request.session.destroy(function(err) {
+    response.redirect('/user/login')
+  })
+})
+
 
 
 module.exports = router;

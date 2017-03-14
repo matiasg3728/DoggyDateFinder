@@ -13,9 +13,11 @@
   },
   "author": "Ann'DEsposito Matias Garcia",
   "license": "MIT",
-    "dependencies": {
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "express-session": "^1.15.1",
     "hbs": "^4.0.1",
     "mongoose": "^4.8.6"
   },

@@ -19,13 +19,8 @@ app.use(session({
 	cookie: {secure: false}
 }));
 
-var DogController = require('./controllers/DogController');
-var UserController = require('./controllers/UserController');
-
-
-
-
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
 	extended: true
 }));
