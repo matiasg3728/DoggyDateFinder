@@ -40,7 +40,6 @@ router.get('/signup', function(request, response, next) {
 router.post('/signup', function(request, response, next) {
   User.findOne({username: request.body.username}, function(err, user) {
     if(user === null) {
-      console.log("inside the first if statements")
       bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(request.body.password, salt, function(err, hash) {
           var userDbEntry = {};
@@ -56,7 +55,7 @@ router.post('/signup', function(request, response, next) {
               response.redirect('/dogs/adddog');
             }
             else {
-              response.send('there was an error')
+              response.render('login', {message: 'username unavailable'});
             }
           })
         })
