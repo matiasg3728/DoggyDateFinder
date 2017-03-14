@@ -10,7 +10,10 @@ router.get('/adddog', function(request, response){
 
 router.post('/adddog', function(request, response){
 	//copy and paste any form post
+	var userID = request.session.userId;
+	console.log("userID: "+userID)
 	var dog = new Dog({
+		ownerId: userID,
 		name: request.body.name, 
 		playfulnessLevel: request.body.playfulnessLevel, 
 		zipcode: request.body.zipcode
