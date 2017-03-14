@@ -1,6 +1,4 @@
-@grassGreen: #7cfc00;
-
 body {
   background-image: url("http://www.publicdomainpictures.net/pictures/180000/velka/green-grass-1466178912W6l.jpg");
-  background-color: @grassGreen;
+  background-color: #7cfc00;
 }
