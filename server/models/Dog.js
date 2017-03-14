@@ -2,16 +2,16 @@ var mongoose = require('mongoose');
 
 var DogSchema = new mongoose.Schema({
   //ownerId: Number,
-  name: {type: String, required: true},
+  name:String,
   //age: Number,
   //breed: String,
  // picture: String,
-  playfulnessLevel: {type: Number, required: true},
+  playfulnessLevel: Number,
  // favoriteToys: String,
   //likes: String,
  // dislikes: String,
   //aboutMe: String,
-  zipcode: {type: Number, required: true},
+  zipcode: Number,
   //playdateDogs: Array,
   //comments: Array,
 }, {strict: false});
