@@ -3,9 +3,21 @@ var router = express.Router();
 var Dog = require('../models/Dog');
 
 
+router.get('/home', function(request,response){ 
+
+	var dogArray = [];
+	var userID = request.session.userId;
+	Dog.find({ownerId: userID}, function(err, docs){
+		console.log('inside find')
+		dogArray = docs;
+		console.log(dogArray + 'this is the dogArray value')
+		response.render('userhome',{dogies:dogArray})
+	
+	});
+})
 
 router.get('/adddog', function(request, response){
-	response.render('adddog');	
+	response.render('adddog');
 });
 
 router.post('/adddog', function(request, response){
@@ -22,7 +34,7 @@ router.post('/adddog', function(request, response){
 		if (err) {
 			console.log(err);
 		} else {
-  			console.log('meow');
+  			console.log('dog inputted into db');
 		}
 	});
 

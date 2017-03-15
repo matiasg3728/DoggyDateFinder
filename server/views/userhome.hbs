@@ -1,3 +1,13 @@
 Will have a list of dogs associated with this user. "userhome"
-
+<button>Create Dog</button>
 <a href="/user/logout">Logout</a>
+<br>
+ {{#each dogies}}
+<div data-id="{{ this.id }}">
+	<h1>{{this.name}}</h1>	
+	<img src="http://images2.fanpop.com/images/photos/8000000/Why-Dogs-Bite-People-random-8036426-479-344.jpg">
+</div>
+ {{/each}}
+
+
+
