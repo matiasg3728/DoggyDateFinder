@@ -5,8 +5,6 @@ var bcrypt = require('bcryptjs');
 
 
 router.get('/login', function(request, response, next) {
-  //console.log(request.session);
-  //console.log(User.find({"username": "admin"}))
   response.render('login', {});
 });
 
@@ -31,11 +29,11 @@ router.post('/login', function(request, response, next) {
       response.render('login', {message: 'username or password was incorrect'});
     }
   })
-})
+});
 
 router.get('/signup', function(request, response, next) {
   response.render('signup', {})
-})
+});
 
 router.post('/signup', function(request, response, next) {
   User.findOne({username: request.body.username}, function(err, user) {
@@ -65,11 +63,11 @@ router.post('/signup', function(request, response, next) {
       response.render('signup', {message: 'username already taken'})
     }
   })
-})
+});
 
 router.get('/home', function(request, response) {
   response.render('userhome')
-})
+});
 
 
 
@@ -77,7 +75,7 @@ router.get('/logout', function(request, response) {
   request.session.destroy(function(err) {
     response.redirect('/user/login')
   })
-})
+});
 
 
 

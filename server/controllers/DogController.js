@@ -5,7 +5,7 @@ var Dog = require('../models/Dog');
 
 
 router.get('/adddog', function(request, response){
-	response.render('adddog');	
+	response.render('adddog');
 });
 
 router.post('/adddog', function(request, response){
@@ -14,19 +14,19 @@ router.post('/adddog', function(request, response){
 	console.log("userID: "+userID)
 	var dog = new Dog({
 		ownerId: userID,
-		name: request.body.name, 
-		playfulnessLevel: request.body.playfulnessLevel, 
+		name: request.body.name,
+		playfulnessLevel: request.body.playfulnessLevel,
 		zipcode: request.body.zipcode
 	})
 	dog.save(function (err) {
 		if (err) {
 			console.log(err);
 		} else {
-  			console.log('meow');
+  			console.log('save is working');
 		}
 	});
 
-	response.render('userhome');	
+	response.render('userhome');
 
 });
 
