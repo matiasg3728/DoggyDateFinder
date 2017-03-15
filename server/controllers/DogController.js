@@ -26,19 +26,20 @@ router.post('/adddog', function(request, response){
 	console.log("userID: "+userID)
 	var dog = new Dog({
 		ownerId: userID,
-		name: request.body.name, 
-		playfulnessLevel: request.body.playfulnessLevel, 
+		name: request.body.name,
+		playfulnessLevel: request.body.playfulnessLevel,
 		zipcode: request.body.zipcode
 	})
 	dog.save(function (err) {
 		if (err) {
 			console.log(err);
 		} else {
-  			console.log('dog inputted into db');
+
+  			console.log('save is working');
 		}
 	});
 
-	response.render('userhome');	
+	response.render('userhome');
 
 });
 

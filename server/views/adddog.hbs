@@ -1,7 +1,36 @@
-<h1>DOG!</h1>
+<h1>Add A Dog To Your Account</h1>
 <form action="/dogs/adddog" method="POST">
-	<input type="text" placeholder="Name" name="name"/>
-	<input type="text" placeholder="playfulness level" name="playfulnessLevel"/>
-	<input type="text" placeholder="zipcode" name="zipcode"/>
-	<input type="submit" value="Submit!"/>
+	<div class="addDogInput">
+		<input type="text" placeholder="Name" name="name"/>
+		<input type="text" placeholder="Age" name="age"/>
+		<input type="text" placeholder="Breed" name="breed"/>
+		<input type="text" placeholder="Zipcode" name="zipcode"/>
+	</div>
+
+	<div class="addDogInput">
+		<select id="dropdown">
+			<option value="1">Playfulness 1 : lazy</option>
+			<option value="2">Playfulness 2</option>
+			<option value="3">Playfulness 3</option>
+			<option value="4">Playfulness 4</option>
+			<option value="5">Playfulness 5 : average</option>
+			<option value="6">Playfulness 6</option>
+			<option value="7">Playfulness 7</option>
+			<option value="8">Playfulness 8</option>
+			<option value="9">Playfulness 9</option>
+			<option value="10">Playfulness 10 : spaz</option>
+		</select>
+		<input type="text" placeholder="Favorite Toys" name="favoriteToys"/>
+		<input type="text" placeholder="Likes" name="likes"/>
+		<input type="text" placeholder="Dislikes" name="dislikes"/>
+	</div>
+
+		<input type="text" placeholder="enter url to the image of your dog here" name="picture" id="imageLink"/>
+
+
+	<div id="aboutTextField">
+		<textarea rows="10" cols="95" placeholder="About My Dog"></textarea>
+	</div>
+
+	<input type="submit" value="Add My Dog" id="submitButton"/>
 </form>

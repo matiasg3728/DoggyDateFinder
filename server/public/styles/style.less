@@ -1,6 +1,79 @@
 @grassGreen: #7cfc00;
+@darkGreen: #0A7F0A;
 
 body {
   background-image: url("http://www.publicdomainpictures.net/pictures/180000/velka/green-grass-1466178912W6l.jpg");
   background-color: @grassGreen;
+  position: relative;
+  text-align: center;
+}
+
+h1 {
+  color: @darkGreen;
+  font-size: 40px;
+}
+
+footer{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 20px;
+}
+
+input {
+  width: 137.5px;
+  border-radius: 12px;
+  border-color: @grassGreen;
+}
+
+.addDogInput {
+  padding-top: 50px;
+}
+
+#dropdown {
+  border-radius: 12px;
+  border-color: @grassGreen;
+}
+
+#imageLink {
+  margin-top: 50px;
+  width: 580px;
+}
+
+textarea {
+  margin-top: 50px;
+  //text-align: center;
+  height: auto;
+  border-radius: 12px;
+  border-color: @grassGreen;
+}
+
+#submitButton {
+  margin-top: 50px;
+  color: @darkGreen;
+  background-color: @grassGreen;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    @darkGreen;
+    text-align: center;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    @darkGreen;
+   opacity:  1;
+   text-align: center;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    @darkGreen;
+   opacity:  1;
+   text-align: center;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    @darkGreen;
+   text-align: center;
 }
