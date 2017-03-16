@@ -3,8 +3,8 @@ var router = express.Router();
 var Dog = require('../models/Dog');
 
 
-router.get('/home', function(request,response){
 
+router.get('/home', function(request,response){
 	var dogArray = [];
 	var userID = request.session.userId;
 	Dog.find({ownerId: userID}, function(err, docs){
@@ -12,7 +12,6 @@ router.get('/home', function(request,response){
 		dogArray = docs;
 		console.log(dogArray + 'this is the dogArray value')
 		response.render('userhome',{dogies:dogArray})
-
 	});
 })
 
@@ -21,7 +20,6 @@ router.get('/adddog', function(request, response){
 });
 
 router.post('/adddog', function(request, response){
-	//copy and paste any form post
 	var userID = request.session.userId;
 	console.log("userID: "+userID)
 	var dog = new Dog({
@@ -41,13 +39,10 @@ router.post('/adddog', function(request, response){
 		if (err) {
 			console.log(err);
 		} else {
-
   			console.log('save is working');
 		}
 	});
-
 	response.render('userhome');
-
 });
 
 router.get('/:id', function(request, response){

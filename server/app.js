@@ -7,6 +7,7 @@ var mongoose = require('mongoose');
 var hbs = require('hbs');
 var session = require('express-session');
 
+
 require('./db/db');
 
 app.set('views', path.join(__dirname, 'views'));

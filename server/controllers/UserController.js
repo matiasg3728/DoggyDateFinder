@@ -4,6 +4,7 @@ var User = require('../models/User');
 var bcrypt = require('bcryptjs');
 
 
+
 router.get('/login', function(request, response, next) {
   response.render('login', {});
 });
@@ -69,14 +70,10 @@ router.get('/home', function(request, response) {
   response.render('userhome')
 });
 
-
-
 router.get('/logout', function(request, response) {
   request.session.destroy(function(err) {
     response.redirect('/user/login')
   })
 });
-
-
 
 module.exports = router;
