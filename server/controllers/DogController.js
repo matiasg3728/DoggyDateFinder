@@ -7,7 +7,6 @@ var Dog = require('../models/Dog');
 router.get('/home', function(request,response){
 	var dogArray = [];
 	var userID = request.session.userId;
-
 	if(request.session.isLoggedIn === true){
 		Dog.find({ownerId: userID}, function(err, docs){
 			console.log('inside find')
@@ -57,7 +56,7 @@ router.post('/adddog', function(request, response){
 });
 
 router.get('/:id', function(request, response){
-	var id = req.params.id;
+	var id = request.params.id;
 	Dog.findById(id, function(err, dog){
 		console.log(dog);
 		response.render('dogprofile', {doggie:dog});
