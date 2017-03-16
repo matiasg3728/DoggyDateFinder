@@ -8,7 +8,6 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
 }
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -19,36 +18,30 @@ ul {
   height: 100%;
   overflow: auto;
 }
-
 li a {
   display: block;
   color: #8F2500;
   padding: 8px 16px;
   text-decoration: none;
 }
-
 li a.active {
   background-color: #8F2500;
   color: white;
 }
-
 li a:hover:not(.active) {
   background-color: #FF6632;
   color: white;
 }
-
 h1 {
   color: #8F2500;
   font-size: 50px;
   font-family: 'Rasa', serif;
 }
-
 h2 {
   color: #8F2500;
   font-size: 40px;
   font-family: 'Rasa', serif;
 }
-
 footer {
   position: fixed;
   float: left;
@@ -60,52 +53,43 @@ footer {
   color: #8F2500;
   padding-top: 50px;
 }
-
 input {
   width: 137.5px;
   border-radius: 12px;
   border-color: #8F2500;
 }
-
 .addDogInput {
   padding-top: 50px;
 }
-
 #dropdown {
   border-radius: 12px;
   border-color: #8F2500;
 }
-
 #imageLink {
   margin-top: 50px;
   width: 580px;
 }
-
 textarea {
   margin-top: 50px;
   height: auto;
   border-radius: 12px;
   border-color: #8F2500;
 }
-
 img {
   max-width: 100%;
   height: auto;
 }
-
 #dogContainer {
   background-color: #FF6632;
   width: 500px;
   height: 500px;
   margin: auto;
 }
-
 #notUser {
   position: fixed;
   bottom: 0;
   right: 0;
 }
-
 #submitButton {
   margin-top: 50px;
   color: #8F2500;
@@ -114,27 +98,23 @@ img {
   border-radius: 12px;
   border-color: #8F2500;
 }
-
 ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #0A7F0A;
   text-align: center;
 }
-
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #0A7F0A;
   opacity: 1;
   text-align: center;
 }
-
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #0A7F0A;
   opacity: 1;
   text-align: center;
 }
-
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #0A7F0A;
