@@ -45,6 +45,7 @@ router.post('/adddog', function(request, response){
 		aboutMe: request.body.aboutMe,
 		zipcode: request.body.zipcode
 	})
+	
 	dog.save(function (err) {
 		if (err) {
 			console.log(err);
