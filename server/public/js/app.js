@@ -1,12 +1,13 @@
 console.log('loaded')
 $('.dogContainer').on('click', function(e){
-	console.log('click')
+	console.log(e.target)
 	dogid = $(e.target).data('id');
 	$.ajax({
 		url: '/dogs/'+ dogid,
 		type: 'GET',
 		success: function(result){
-			window.location.replace("http://localhost:3000/dogs/"+dogid)},
+			console.log(dogid)
+			window.location.replace("http://localhost:3000/dogs/" + dogid)},
 		error: function(err){
 			console.log(err);
 		}

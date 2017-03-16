@@ -57,6 +57,7 @@ router.post('/adddog', function(request, response){
 
 router.get('/:id', function(request, response){
 	var id = request.params.id;
+	console.log(typeof(id) + ' this is ids type');
 	Dog.findById(id, function(err, dog){
 		console.log(dog);
 		response.render('dogprofile', {doggie:dog});
