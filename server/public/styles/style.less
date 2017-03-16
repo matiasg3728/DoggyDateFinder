@@ -1,32 +1,75 @@
 @grassGreen: #7cfc00;
 @darkGreen: #0A7F0A;
+@orange: #8F2500;
+@lightOrange: #FF6632;
 
 body {
   background-image: url("http://www.publicdomainpictures.net/pictures/180000/velka/green-grass-1466178912W6l.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: @grassGreen;
   position: relative;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: @lightOrange;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: @orange;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: @orange;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: @lightOrange;
+  color: white;
 }
 
 h1 {
-  color: @darkGreen;
+  color: @orange;
+  font-size: 50px;
+  font-family: 'Rasa', serif;
+}
+
+h2 {
+  color: @orange;
   font-size: 40px;
+  font-family: 'Rasa', serif;
 }
 
 footer{
   position: fixed;
-  right: 0;
-  bottom: 0;
+  float: left;
+  height: 30px;
   left: 0;
   padding: 1rem;
   text-align: center;
   font-size: 20px;
+  color: @orange;
+  padding-top: 50px;
 }
 
 input {
   width: 137.5px;
   border-radius: 12px;
-  border-color: @grassGreen;
+  border-color: @orange;
 }
 
 .addDogInput {
@@ -35,7 +78,7 @@ input {
 
 #dropdown {
   border-radius: 12px;
-  border-color: @grassGreen;
+  border-color: @orange;
 }
 
 #imageLink {
@@ -48,15 +91,28 @@ textarea {
   //text-align: center;
   height: auto;
   border-radius: 12px;
-  border-color: @grassGreen;
+  border-color: @orange;
+}
+
+img  {
+  max-width: 100%;
+  height: auto;
+}
+
+#dogContainer {
+  background-color: @lightOrange;
+  width: 500px;
+  height: 500px;
+  margin: auto;
 }
 
 #submitButton {
   margin-top: 50px;
-  color: @darkGreen;
-  background-color: @grassGreen;
+  color: @orange;
+  background-color: @lightOrange;
   font-size: 16px;
   border-radius: 12px;
+  border-color: @orange;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
