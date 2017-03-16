@@ -60,7 +60,7 @@ router.get('/:id', function(request, response){
 	var id = req.params.id;
 	Dog.findById(id, function(err, dog){
 		console.log(dog);
-		response.render('dogprofile');
+		response.render('dogprofile', {doggie:dog});
 	});
 });
 
