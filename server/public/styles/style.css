@@ -96,10 +96,16 @@ br {
   top: 0;
   right: 0;
   width: 25%;
-  background-color: transparent;
+  background-color: #FF6632;
   position: fixed;
   height: 100%;
   overflow: auto;
+  display: inline-block;
+}
+#centerDiv {
+  left: 32%;
+  position: fixed;
+  display: inline-block;
 }
 table {
   color: #8F2500;
