@@ -69,13 +69,13 @@ router.post('/signup', function(request, response, next) {
 });
 
 router.get('/home', function(request, response) {
-  // if(request.session.isLoggedIn === true){
-  //   console.log(' hey im still logged in')
-  // }
-  // else {
-  //   console.log(request.session, ' this is req')
-  // }
-  // console.log(request.session)
+  if(request.session.isLoggedIn === true){
+    console.log(' hey im still logged in')
+  }
+  else {
+    console.log(request.session, ' this is req')
+  }
+  console.log(request.session)
   response.render('userhome')
 });
 

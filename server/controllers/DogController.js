@@ -7,16 +7,27 @@ var Dog = require('../models/Dog');
 router.get('/home', function(request,response){
 	var dogArray = [];
 	var userID = request.session.userId;
-	Dog.find({ownerId: userID}, function(err, docs){
-		console.log('inside find')
-		dogArray = docs;
-		console.log(dogArray + 'this is the dogArray value')
-		response.render('userhome',{dogies:dogArray})
-	});
+
+	if(request.session.isLoggedIn === true){
+		Dog.find({ownerId: userID}, function(err, docs){
+			console.log('inside find')
+			dogArray = docs;
+			console.log(dogArray + 'this is the dogArray value')
+			response.render('userhome',{dogies:dogArray})
+		});
+  }
+  else {
+    response.redirect('/user/login');
+  }
 })
 
 router.get('/adddog', function(request, response){
-	response.render('adddog');
+	if(request.session.isLoggedIn === true){
+		response.render('adddog');
+	}
+	else {
+    response.redirect('/user/login');
+  }
 });
 
 router.post('/adddog', function(request, response){
@@ -42,7 +53,7 @@ router.post('/adddog', function(request, response){
   			console.log('save is working');
 		}
 	});
-	response.render('userhome');
+	response.redirect('/dogs/home');
 });
 
 router.get('/:id', function(request, response){
