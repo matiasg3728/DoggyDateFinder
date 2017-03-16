@@ -1,15 +1,37 @@
-<div><h1>{{this.name}}</h1></div>
+<div><h1>{{doggie.name}}</h1></div>
 <div>
-	<img src="{{this.picture}}">
+	<img src="{{doggie.picture}}" id="profilePic">
 </div>
 
 <div>
-<p>{{this.aboutMe}}</p>
+<p>{{doggie.aboutMe}}</p>
 </div>
 
-<div>
-	<!-- this is the side bar -->
-
+<div id="statsSidebar">
+	<table>
+		<tr>
+			<th>Breed : </th>
+			<td>{{doggie.breed}}</td>
+		</tr>
+		<tr>
+			<th>Age : </th>
+			<td>{{doggie.age}}</td>
+		</tr>
+		<tr>
+			<th>Playfulness Level : </th>
+			<td>{{doggie.playfulnessLevel}}</td>
+		</tr>
+		<tr>
+			<th>Favorite Toys : </th>
+			<td>{{doggie.favoriteToys}}</td>
+		</tr>
+		<tr>
+			<th>Likes : </th>
+			<td>{{doggie.likes}}</td>
+		</tr>
+		<tr>
+			<th>Dislikes : </th>
+			<td>{{doggie.dislikes}}</td>
+		</tr>
+	</table>
 </div>
-
-

@@ -92,12 +92,28 @@ img {
 br {
   font-size: 20px;
 }
+#statsSidebar {
+  top: 0;
+  right: 0;
+  width: 25%;
+  background-color: transparent;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+table {
+  color: #8F2500;
+  border-spacing: 12px;
+  text-align: left;
+}
+#statsInfo {
+  text-align: left;
+}
 #notUser {
   position: fixed;
   bottom: 0;
   right: 0;
-}
-#notUser a:link {
+  text-decoration: none;
   color: #8F2500;
 }
 #submitButton {
