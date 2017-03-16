@@ -42,14 +42,16 @@ router.post('/adddog', function(request, response){
   			console.log('save is working');
 		}
 	});
-	response.render('userhome');
+
+
+	response.redirect('/dogs/home');
 });
 
 router.get('/:id', function(request, response){
 	var id = req.params.id;
 	Dog.findById(id, function(err, dog){
 		console.log(dog);
-		response.render('dogprofile');
+		response.render('dogprofile', {doggie:dog});
 	});
 });
 
