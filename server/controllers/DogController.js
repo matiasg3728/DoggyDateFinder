@@ -8,9 +8,9 @@ router.get('/home', function(request,response){
 	var dogArray = [];
 	var userID = request.session.userId;
 	Dog.find({ownerId: userID}, function(err, docs){
-		console.log('inside find')
+		//console.log('inside find')
 		dogArray = docs;
-		console.log(dogArray + 'this is the dogArray value')
+		//console.log(dogArray + 'this is the dogArray value')
 		response.render('userhome',{dogies:dogArray})
 	});
 })
@@ -42,13 +42,11 @@ router.post('/adddog', function(request, response){
   			console.log('save is working');
 		}
 	});
-
-
 	response.redirect('/dogs/home');
 });
 
 router.get('/:id', function(request, response){
-	var id = req.params.id;
+	var id = request.params.id;
 	Dog.findById(id, function(err, dog){
 		console.log(dog);
 		response.render('dogprofile', {doggie:dog});

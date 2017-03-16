@@ -79,7 +79,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-#dogContainer {
+.dogContainer {
   background-color: #FF6632;
   width: 500px;
   height: 500px;
