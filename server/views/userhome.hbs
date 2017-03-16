@@ -1,7 +1,9 @@
 <h1>My Dogs</h1>
 <br>
 {{#each dogies}}
-<div data-id="{{ this.id }}" id="dogContainer">
+
+<div data-id="{{ this.id }}" class="dogContainer">
 	<h2 class="dogName">{{this.name}}</h2>
-	<img src="{{this.picture}}" alt="{{this.name}} picture">
+	<img src="{{this.picture}}" alt="{{this.name}} picture" id="dogPic">
+</div>
 {{/each}}
