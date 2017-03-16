@@ -41,6 +41,7 @@ h2 {
   color: #8F2500;
   font-size: 40px;
   font-family: 'Rasa', serif;
+  margin: 0;
 }
 footer {
   position: fixed;
@@ -76,14 +77,20 @@ textarea {
   border-color: #8F2500;
 }
 img {
-  max-width: 100%;
+  display: block;
+  max-width: 500px;
+  max-height: 400px;
+  width: auto;
   height: auto;
+  margin: auto;
 }
 .dogContainer {
-  background-color: #FF6632;
-  width: 500px;
-  height: 500px;
+  background-color: transparent;
   margin: auto;
+  margin-bottom: 9%;
+}
+br {
+  font-size: 20px;
 }
 #notUser {
   position: fixed;
