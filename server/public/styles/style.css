@@ -97,6 +97,9 @@ br {
   bottom: 0;
   right: 0;
 }
+#notUser a:link {
+  color: #8F2500;
+}
 #submitButton {
   margin-top: 50px;
   color: #8F2500;
