@@ -45,7 +45,7 @@ router.post('/adddog', function(request, response){
 		aboutMe: request.body.aboutMe,
 		zipcode: request.body.zipcode
 	})
-	
+
 	dog.save(function (err) {
 		if (err) {
 			console.log(err);
@@ -64,5 +64,6 @@ router.get('/:id', function(request, response){
 		response.render('dogprofile', {doggie:dog});
 	});
 });
+
 
 module.exports = router;
