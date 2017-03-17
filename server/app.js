@@ -22,6 +22,10 @@ app.use(session({
 	cookie: {secure: false}
 }));
 
+app.get('/', function(request, response) {
+	response.redirect('/user/login');
+})
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.json());
