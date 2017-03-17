@@ -10,8 +10,6 @@ router.get('/login', function(request, response, next) {
 });
 
 router.post('/login', function(request, response, next) {
-  // console.log('in log in');
-  // console.log(request.session);
   User.findOne({username: request.body.username}, function(err, user) {
     if(user) {
       bcrypt.compare(request.body.password, user.password, function(err, match) {
@@ -19,7 +17,6 @@ router.post('/login', function(request, response, next) {
           request.session.username = user.username;
           request.session.userId = user.id;
           request.session.isLoggedIn = true;
-          console.log('inside nested if')
           response.redirect('/dogs/home');
         }
         else {
@@ -34,7 +31,6 @@ router.post('/login', function(request, response, next) {
 });
 
 router.get('/signup', function(request, response, next) {
-  // console.log(request.session)
   response.render('signup', {})
 });
 
@@ -75,16 +71,14 @@ router.get('/home', function(request, response) {
   else {
     console.log(request.session, ' this is req')
   }
-  console.log(request.session)
   response.render('userhome')
 });
 
 router.get('/logout', function(request, response) {
-  // console.log("logged out");
-  // console.log(request.session);
   request.session.destroy(function(err) {
     response.redirect('/user/login');
   });
 });
+
 
 module.exports = router;

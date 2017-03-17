@@ -9,9 +9,7 @@ router.get('/home', function(request,response){
 	var userID = request.session.userId;
 	if(request.session.isLoggedIn === true){
 		Dog.find({ownerId: userID}, function(err, docs){
-			console.log('inside find')
 			dogArray = docs;
-			console.log(dogArray + 'this is the dogArray value')
 			response.render('userhome',{dogies:dogArray})
 		});
   }
@@ -31,7 +29,6 @@ router.get('/adddog', function(request, response){
 
 router.post('/adddog', function(request, response){
 	var userID = request.session.userId;
-	console.log("userID: "+userID)
 	var dog = new Dog({
 		ownerId: userID,
 		name: request.body.name,
@@ -58,9 +55,7 @@ router.post('/adddog', function(request, response){
 
 router.get('/:id', function(request, response){
 	var id = request.params.id;
-	console.log(typeof(id) + ' this is ids type');
 	Dog.findById(id, function(err, dog){
-		console.log(dog);
 		response.render('dogprofile', {doggie:dog});
 	});
 });

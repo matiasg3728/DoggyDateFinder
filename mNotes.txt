@@ -1,3 +1,0 @@
-March 13, 2:16
-	
-	Begining work on dogcontroller and all views
