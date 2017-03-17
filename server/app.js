@@ -1,3 +1,4 @@
+require('dotenv').config();
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
@@ -6,6 +7,7 @@ var path = require('path');
 var mongoose = require('mongoose');
 var hbs = require('hbs');
 var session = require('express-session');
+var dotenv = require('dotenv').config();
 
 
 require('./db/db');
