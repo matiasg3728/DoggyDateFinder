@@ -12,8 +12,6 @@ var DogSchema = new mongoose.Schema({
   dislikes: String,
   aboutMe: String,
   zipcode: Number,
-  // playdateDogs: Array,
-  // comments: Array,
 }, {strict: false});
 
 var dogModel = mongoose.model('Dog', DogSchema);
