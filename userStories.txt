@@ -1,0 +1,5 @@
+1. As a user, I want to sign up for an account, add my dog(s) to my account, and access their unique profiles and see the data stored about them (name, age, breed, picture, zipcode, how playful they are, favorite toys, likes, dislikes, and an about me section). I want to be able to log in and log out securely. Being able to do these things will allow me to manage my dogs, and, upon search implementation, be able to locate dog friends for my dog based on assorted criteria.
+
+2. As an admin, I want to be able to access the database of dogs and users, ensure that passwords are hashed and stored as such, that users must register and sign in to the site before accessing the home page or dog profiles pages.
+
+To still be implemented : search function, update function to allow users to modify their dog profiles, and delete function to allow users to remove their dog from the database entirely. Additional stretch goal would be a messaging feature to allow users to connect and plan playdates, as well as allowing users to comment on dogs they find using the search function.
